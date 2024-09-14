@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Service Cards</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --background-color: #0a0f1a;
+    --card-background-color: #1e2a38;
+    --card-hover-background: #2b3b4f;
+    --text-color: #ffffff;
+    --card-width: 350px;
+    --card-padding: 20px;
+    --border-radius: 20px;
+    --box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    --hover-scale: 1.1;
+    --transition-duration: 0.3s;
+    --gradient-start: #3498db;
+    --gradient-end: #2ecc71;
+    --icon-size: 60px;
+    --title-font-size: 22px;
+    --description-font-size: 14px;
+  }
+
+  body {
+    background-color: var(--background-color);
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center; /* Center align cards */
+  }
+
+  .service-card {
+    background: var(--card-background-color);
+    padding: var(--card-padding);
+    border-radius: var(--border-radius);
+    text-align: center;
+    width: var(--card-width);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--transition-duration), background var(--transition-duration);
+    cursor: pointer;
+  }
+
+  .service-card:hover {
+    transform: scale(var(--hover-scale));
+    background: var(--card-hover-background);
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    opacity: 0.1;
+    border-radius: var(--border-radius);
+    z-index: 0;
+  }
+
+  .icon-container {
+    font-size: var(--icon-size);
+    margin-bottom: 15px;
+    color: var(--text-color);
+    z-index: 1;
+  }
+
+  .card-title {
+    font-size: var(--title-font-size);
+    font-weight: 700;
+    margin-bottom: 10px;
+    z-index: 1;
+  }
+
+  .card-description {
+    font-size: var(--description-font-size);
+    line-height: 1.5;
+    z-index: 1;
+  }
+
+  @media (max-width: 1200px) {
+    .card-container {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .service-card {
+      width: calc(50% - 20px); /* Adjust for medium screens */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .service-card {
+      width: calc(100% - 20px); /* Full width on small screens */
+    }
+  }
+</style>
+</head>
+<body>
+  <section class="card-container">
+    <article id="card-quick-turnarounds" class="service-card">
+      <div class="icon-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 48 48">
+          <path d="M17.5 22.5v-10l7.5 7.5h10v10h-10l-7.5-7.5z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <path d="M22.5 10.5h15v15h-15z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <path d="M17.5 31.5h10v10h-10z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </svg>
+      </div>
+      <h2 class="card-title">Quick Turnarounds</h2>
+      <p class="card-description">We don’t like to keep our clients waiting; we instantly respond to all your concerns and requirements!</p>
+    </article>
+    <article id="card-transparency-reliability" class="service-card">
+      <div class="icon-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 48 48">
+          <path d="M32.5 15v10h-10v-10h10zM20.5 10.5v10h10v-10h-10zM28.5 35v10h-10v-10h10z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <path d="M37.5 22.5h-5l-3 3v10h-10v-10l-3-3h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </svg>
+      </div>
+      <h2 class="card-title">Transparency and Reliability</h2>
+      <p class="card-description">We keep all our clients in the loop throughout the process; our services are transparent and reliable.</p>
+    </article>
+    <article id="card-live-chat-support" class="service-card">
+      <div class="icon-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 48 48">
+          <path d="M35.5 37.5h-10v-10h10z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <path d="M32.5 27.5h10v10h-10z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <path d="M35.5 25h-10v-10h10z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </svg>
+      </div>
+      <h2 class="card-title">Live Chat Support</h2>
+      <p class="card-description">We are here to assist you through live chat during business hours (Monday-Friday) regardless of your query!</p>
+    </article>
+    <article id="card-tailored-solutions" class="service-card">
+      <div class="icon-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 48 48">
+          <path d="M35.5 27.5h-10v-10h10z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <path d="M20.5 22.5h10v10h-10z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <path d="M17.5 15h10v10h-10z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <path d="M22.5 27.5h10v10h-10z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </svg>
+      </div>
+      <h2 class="card-title">Tailored Solutions</h2>
+      <p class="card-description">Our strategists create successful strategy concepts for all businesses, be it a startup or an established business.</p>
+    </article>
+  </section>
+</body>
+</html>

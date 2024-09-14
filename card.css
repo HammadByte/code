@@ -1,0 +1,110 @@
+#bbody {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url("images/bg.jpg") #030728 no-repeat center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+}
+
+#header1 {
+    margin-bottom: 20px;
+}
+
+#header1 #h11 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.swiper {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-item:hover {
+    background-image: linear-gradient(to bottom, #131a24, #122032, #112540, #0f2b4e, #0e305d);
+
+
+}
+
+.card-item {
+    width: 400px;
+    padding: 15px;
+    color: #fff;
+
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+    /* backdrop-filter: blur(15px); */
+    /* background: rgba(255, 255, 255, 0.3); */
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.user-image {
+    width: 200px;
+    height: 200px;
+    /* border-radius: 50%; */
+    margin-bottom: 30px;
+    /* border: 4px solid #fff; */
+    padding: 2px;
+}
+
+.user-name {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.scroll-container {
+    max-height: 300px;
+    /* Increased max height */
+    overflow-y: auto;
+    margin-bottom: 30px;
+    /* Increased margin */
+}
+
+.user-profession {
+    font-size: 16px;
+    /* color: #e3e3e3; */
+    color: #979797;
+    font-weight: 500;
+    margin-bottom: 15px;
+    /* Increased margin */
+}
+
+.message-button {
+    font-size: 1.5rem;
+    /* Increased font size */
+    padding: 15px 30px;
+    /* Increased padding */
+    color: #030728;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    background: #fff;
+    border: none;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.message-button:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: #030728;
+}

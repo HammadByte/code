@@ -1,0 +1,108 @@
+#boddy {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main-content-container {
+    background-color: #4a2c2a;
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 1000px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+}
+
+.main-content-container h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.main-content-container p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.button-group-wrapper {
+    margin: 20px 0;
+}
+
+.button-group-wrapper button {
+    background-color: #fff;
+    color: #4a2c2a;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s, transform 0.3s;
+    outline: none;
+}
+
+.button-group-wrapper button:hover,
+.button-group-wrapper button:focus {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+.unique-image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.unique-image-gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.unique-footer-text {
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .main-content-container {
+        padding: 20px;
+    }
+
+    .main-content-container h1 {
+        font-size: 2.2rem;
+    }
+
+    .main-content-container p {
+        font-size: 1rem;
+    }
+
+    .button-group-wrapper button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .button-group-wrapper {
+        flex-direction: column;
+    }
+
+    .button-group-wrapper button {
+        margin: 10px 0;
+        width: 100%;
+    }
+}

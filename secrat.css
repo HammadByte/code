@@ -1,0 +1,104 @@
+#booody {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    color: #343a40;
+    line-height: 1.6;
+}
+
+.unique-main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.unique-text-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.unique-text-section h1.unique-main-heading {
+    font-size: 2.8em;
+    color: #212529;
+    margin-bottom: 0.5em;
+}
+
+.unique-text-section p.unique-intro-paragraph {
+    color: #6c757d;
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.unique-image-wrapper {
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.unique-image-wrapper img.unique-featured-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 5px solid #007bff;
+    border-radius: 10px;
+}
+
+.unique-cta-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.unique-cta-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.3s;
+    text-transform: uppercase;
+}
+
+.unique-cta-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.unique-cta-button:active {
+    background-color: #004080;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .unique-main-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .unique-cta-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .unique-image-wrapper {
+        margin-top: 20px;
+    }
+}

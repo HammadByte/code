@@ -1,0 +1,204 @@
+#bodyyy, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styles */
+#bodyyy {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container Styles */
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#process-content {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+}
+
+#process-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+
+#process-content:hover::before {
+    opacity: 0.1; /* Subtle effect on hover */
+}
+
+#process-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #222;
+    text-align: center;
+    font-weight: 700;
+}
+
+#steps-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scroll-behavior: smooth;
+}
+
+.process-step {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex: 1 0 300px;
+    min-width: 300px;
+    position: relative;
+    overflow: hidden;
+    opacity: 0; /* Hide steps initially */
+    transition: opacity 0.6s ease, transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.process-step.visible {
+    opacity: 1; /* Show steps when they are in view */
+}
+
+.process-step:hover {
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
+    transform: translateY(-12px) scale(1.03); /* Lift and scale effect */
+    background: linear-gradient(145deg, #e0e0e0, #ffffff); /* Gradient background on hover */
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.step-number-container {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    background: #4285f4;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-number-text {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.6s ease;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.step-number-dot {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-left: 5px;
+}
+
+.step-number-container:hover {
+    background: #357ae8; /* Darker shade on hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.process-step:hover .step-number-text {
+    transform: rotateY(180deg); /* Flip effect */
+}
+
+.step-content {
+    margin-left: 20px;
+    flex: 1;
+}
+
+.step-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.process-step:hover .step-title {
+    color: #4285f4; /* Change color on hover */
+}
+
+.step-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+.process-step:hover .step-description {
+    color: #444; /* Slightly darker text color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #process-content {
+        padding: 30px;
+    }
+
+    .step-number-text {
+        font-size: 2.75rem;
+    }
+
+    .step-title {
+        font-size: 1.25rem;
+    }
+
+    .step-description {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #steps-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .process-step {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        min-width: auto;
+    }
+
+    .step-number-text {
+        font-size: 2.25rem;
+        margin-bottom: 10px;
+    }
+
+    .step-description {
+        font-size: 0.85rem;
+    }
+}
