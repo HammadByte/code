@@ -64,7 +64,7 @@ if (button) {
     })
 }
 
-const subscribe = document.getElementById('subscribe')
+const subscribe = document.getElementById('subscribe-btn')
 if (subscribe) {
     subscribe.addEventListener('click', () => {
         location.href = 'signup.html'
