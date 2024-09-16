@@ -7,6 +7,7 @@
     <!-- the icon of the link ok -->
     <link rel="icon" href="https://t4.ftcdn.net/jpg/04/73/93/99/360_F_473939963_ccpnl45bkLc694ATszsGARECLOhBIYc4.jpg">
     <!--  -->
+    <link rel="stylesheet" href="css/wickedcss.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
@@ -583,7 +584,7 @@
 </head>
 <body>
     <header>
-        <div class="logo">
+        <div class="logo animate__animated animate__fadeInLeft">
             <img src="./assets/image/jp.png" alt="PDC Logo">
             <a href="" style="color: white; text-decoration: none;"><h1>PDC</h1></a>
         </div>
@@ -621,7 +622,7 @@
             </ul>
         </nav>
         <div class="contact animate__animated animate__fadeInRight">
-            <a href="tel:+18666575669">+1 (866) 657 5669</a>
+            <a href="tel:+15109540786">+1 (510) 954 0786</a>
             <a href="#" class="live-chat">Live Chat</a>
         </div>
     </header>
@@ -649,7 +650,7 @@
         <div class="call-to-action">
             <div class="form">
                 <input type="text" placeholder="Enter Your Name">
-                <button class="cta-button" id="startproject">Start Project</button>
+                <button class="cta-button animate__animated animate__fadeInUp" id="startproject">Start Project</button>
             </div>
             <div class="badge">
                 <img src="https://creativedesigncrew.com/assets/logo-design/images/trust.png" alt="Trustpilot Badge">
@@ -914,14 +915,15 @@
     <h1 id="header-main-title">Unlock Our Prime Design Package</h1>
     <p id="paragraph-main-description">Enhance your brand with our exclusive Prime Design Package. Contact us today to learn more about our offer!</p>
     <div class="button-group-wrapper" id="cta-buttons-container">
-        <button id="button-call-us">Call Us: +1 (510) 954 0786</button>
+        <a href="tel:+15109540786">
+        <button id="button-call-us">Call Us: +1 (510) 954 0786</button></a>
         <button id="button-start-chat">Start Live Chat</button>
     </div>
     <p class="unique-footer-text" id="footer-additional-info">Our support agents are here to assist you. Explore our design options and get started today!</p>
     
     <div class="unique-image-gallery" id="gallery-main">
         <img src="https://creativedesigncrew.com/assets/images/webp/cta-1.webp" alt="Prime Design Showcase" id="image-gallery-item-1">
-        <img src="https://creativedesigncrew.com/assets/images/webp/cta-center-img.webp" alt="Design Center Visual" id="image-gallery-item-2">
+        <img class="pulse" src="https://creativedesigncrew.com/assets/images/webp/cta-center-img.webp" alt="Design Center Visual" id="image-gallery-item-2">
         <img src="https://creativedesigncrew.com/assets/images/webp/cta-2.webp" alt="Support Services" id="image-gallery-item-3">
     </div>
 </div>
@@ -1006,7 +1008,7 @@
           <path d="M17.5 31.5h10v10h-10z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
         </svg>
       </div>
-      <h2 class="card-title">Quick Turnarounds</h2>
+      <h2 class="card-title">Quick Turn arounds</h2>
       <p class="card-description">We don’t like to keep our clients waiting; we instantly respond to all your concerns and requirements!</p>
     </article>
     <article id="card-transparency-reliability" class="service-card">
@@ -1070,7 +1072,7 @@
           <h3>Contact Us</h3>
           <p>Email: <a href="mailto:info@primedesigncrew.com" class="footer-link">info@primedesigncrew.com</a>
           </p>
-          <p>Phone: +1 (510) 954-0786</p>
+          <p>Phone: <a href="tel:+15109540786" class="footer-link"> +1 (510) 954-0786</a></p>
           <p>Address: 2950 E Texas St, Suite 81, Bossier City, LA 71111</p>
         </div>
         <div class="footer-column">

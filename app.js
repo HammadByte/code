@@ -70,3 +70,11 @@ if (subscribe) {
         location.href = 'signup.html'
     })
 }
+
+
+const subscribec = document.getElementById('subscribe')
+if (subscribec) {
+    subscribec.addEventListener('click', () => {
+        location.href = 'signup.html'
+    })
+}
