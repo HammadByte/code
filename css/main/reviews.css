@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.reviews {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.review {
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 22%;
+    margin: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.review img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.review-content {
+    flex: 1;
+}
+
+.review-content h3 {
+    margin: 0;
+    font-size: 1em;
+    color: #333;
+}
+
+.review-content p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 0.8em;
+}
+
+.info {
+    font-size: 0.75em;
+    color: #777;
+    display: flex;
+    align-items: center;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    color: #ffc107;
+}
+
+.rating i {
+    margin-right: 2px;
+}
+
+.verified {
+    color: #28a745;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.btn-chat {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-chat:hover {
+    background-color: #0056b3;
+}
+
+span {
+    color: #ffc107;
+}
